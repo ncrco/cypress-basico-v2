@@ -23,3 +23,23 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+
+
+
+Cypress.Commands.add('fillMandatoryFieldsAndSubmit',function(){
+    const longText = 'teste teste teste teste teste teste teste teste'
+
+    cy.get('#firstName').type("Natalia").should('have.value', 'Natalia')
+    cy.get('#lastName').type("Santos").should('have.value', 'Santos')
+    cy.get ('#email').type('natalia-ciriaco@hotmail.com').should('have.value','natalia-ciriaco@hotmail.com')
+    cy.get ('#phone').type ('11938042029')
+    cy.get ('#email-checkbox').click()
+    cy.get ('#open-text-area').type(longText)
+    
+    // Clica no botão Enviar
+    cy.contains('button','Enviar').click()
+
+    // Verifica se a mensagem de sucesso está visível
+    cy.get('.success').should('be.visible');
+})
