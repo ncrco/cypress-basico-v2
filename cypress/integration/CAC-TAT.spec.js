@@ -186,7 +186,7 @@ describe('Acesse a aplicação', () => {
     it.only('acessa a página da política de privacidade removendo o target e então clicando no link', function(){  
         cy.get('#privacy a')
         .invoke('removeAttr','target')//função que remove o target para que o link não seja aberto em outra aba.
-        .click()    
+        .click()     
+
     })
-   
 }) 
