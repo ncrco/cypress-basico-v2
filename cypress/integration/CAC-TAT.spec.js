@@ -183,7 +183,7 @@ describe('Acesse a aplicação', () => {
         cy.get('#privacy a').should('have.attr','target','_blank')//verifica que existe o atributo valor target e blank
     })
 
-    it.only('acessa a página da política de privacidade removendo o target e então clicando no link', function(){  
+    it('acessa a página da política de privacidade removendo o target e então clicando no link', function(){  
         cy.get('#privacy a')
         .invoke('removeAttr','target')//função que remove o target para que o link não seja aberto em outra aba.
         .click()     
