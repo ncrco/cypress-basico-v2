@@ -40,4 +40,4 @@ Or, run 'npm run cy:open" or 'npx cypress open' to open cypress in interactive m
 # Support this project
 If you want to support this project, leave a ⭐.
 
-This project was created with 💚 by Walmyr.
+This project was created with 💚 by Natalia Santos.
